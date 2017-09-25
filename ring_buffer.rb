@@ -77,6 +77,7 @@ class RingBuffer
     end
   end
 
+  # O(n) (has to copy each element over to a new store)
   def resize!
     new_capacity = capacity * 2
     new_store = StaticArray.new(new_capacity)
